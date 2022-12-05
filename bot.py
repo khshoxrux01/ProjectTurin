@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn 
 
 
-bot = telebot.TeleBot('5879404580:AAFzn7o_uW5lq90b7-9pnW_hESZpXA5M0QY')
+bot = telebot.TeleBot('')
 
 
 @bot.message_handler(commands=['start'])
@@ -108,7 +108,7 @@ def handle_docs_photo(message):
         str(message.document.file_name).split('.')[1] == 'json'
         file_info = bot.get_file(message.document.file_id)
         downloaded_file = bot.download_file(file_info.file_path)
-        src = '/Users/sohruhhusanbaev/Downloads/TTPU/Turin_CS/Project/' + message.document.file_name
+        src = '' + message.document.file_name
         with open (src, 'wb') as new_file:
             new_file.write (downloaded_file)
         
